@@ -1,12 +1,17 @@
 import "./styles.css";
 
 const App = () => {
+  const onClickButton = () => alert();
+  const contentStyle = {
+    color: "blue",
+    fontSize: "18px",
+  };
   return (
     <>
-      <h1>こんにちは！</h1>
-      <h2>お元気ですか</h2>
+      <h1 style={{ color: "red" }}>こんにちは！</h1>
+      <h2 style={contentStyle}>お元気ですか</h2>
       {console.log("hoge!")}
-      <button onClick={() => alert("Hello")}>ボタン</button>
+      <button onClick={onClickButton}>ボタン</button>
     </>
   );
 };
