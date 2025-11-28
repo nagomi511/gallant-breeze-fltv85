@@ -4,21 +4,21 @@ import { createIncrementalCompilerHost } from "typescript";
 
 export const Todo = () => {
   const[todoText, setTodoText] = useState("");
-  const [incompleteTodos, setImcommpleteTodos] = useState([
+  const [incompleteTodos, setIncompleteTodos] = useState([
     "TODO1desu", 
     "TODO2desu"
   ]);
-  const [completeTodos, setcommpleteTodos] = useState(
+  const [completeTodos, setcompleteTodos] = useState(
     ["TODO1desita",
      "TODO2desita"
     ]);
 
-   const onChangeTodoText = (event) => event.target.value;
+   const onChangeTodoText = (event) => setTodoText(event.target.value);
   
    return (
     <>
       <div className="input-area">
-        <input placeholder="Todoを入力" value={todoText} onChange={onchange}/>
+        <input placeholder="Todoを入力" value={todoText} onChange={onChangeTodoText}/>
         <button>追加</button>
       </div>
       <div className="complete-area">
@@ -27,7 +27,7 @@ export const Todo = () => {
           {incompleteTodos.map((todo) => (
             <li key={todo}>
               <div className="list-row">
-                <p claaName="todo-item">{todo}</p>
+                <p className="todo-item">{todo}</p>
                 <button>done</button>
                 <button>delete</button>
               </div>
