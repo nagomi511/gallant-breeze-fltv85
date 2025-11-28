@@ -1,6 +1,9 @@
+import { useState } from "react";
 import "./styles.css";
+import { createIncrementalCompilerHost } from "typescript";
 
 export const Todo = () => {
+  const [incompleteTodos, setImcommpleteTodos] = useState();
   return (
   <>
   <div className="input-area">
@@ -32,13 +35,13 @@ export const Todo = () => {
     <ul>
       <li>
       <div className="list-row">
-        <p>TODOdesu</p>
+        <p>TODOdesita</p>
         <button>return</button>
       </div>
       </li>
       <li>
       <div className="list-row">
-        <p>TODOdesu</p>
+        <p>TODOdesita</p>
         <button>return</button>
       </div>
       </li>
