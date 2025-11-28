@@ -3,6 +3,7 @@ import "./styles.css";
 import { createIncrementalCompilerHost } from "typescript";
 
 export const Todo = () => {
+  const[todoText, setTodoText] = useState("");
   const [incompleteTodos, setImcommpleteTodos] = useState([
     "TODO1desu", 
     "TODO2desu"
@@ -11,10 +12,13 @@ export const Todo = () => {
     ["TODO1desita",
      "TODO2desita"
     ]);
-  return (
+
+   const onChangeTodoText = (event) => event.target.value;
+  
+   return (
     <>
       <div className="input-area">
-        <input placeholder="Todoを入力" />
+        <input placeholder="Todoを入力" value={todoText} onChange={onchange}/>
         <button>追加</button>
       </div>
       <div className="complete-area">
