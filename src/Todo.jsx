@@ -40,7 +40,6 @@ export const Todo = () => {
           ))}
         </ul>
       </div>
-
       <div className="incomplete-area">
         <p className="title">完了のTODO</p>
         <ul>
